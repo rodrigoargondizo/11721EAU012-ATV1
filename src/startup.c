@@ -3,7 +3,6 @@
 #define SRAM_START 0x20000000U /* Inicio da SRAM CORTEX-M */
 #define SRAM_SIZE (128U * 1024U) /* Tam. SRAM STM32F411 128K */
 #define SRAM_END ((SRAM_START) + (SRAM_SIZE)) /* Final da SRAM STM32F411 */
-
 #define STACK_START SRAM_END /* Inicio da Stack */
 
 int main(void);
@@ -45,7 +44,6 @@ STACK_START, /* 0x0000 0000 */
 (uint32_t)pendsv_handler, /* 0x0000 0038 */
 (uint32_t)systick_handler, /* 0x0000 003c */
 };
-
 
 void reset_handler(void)
 {
